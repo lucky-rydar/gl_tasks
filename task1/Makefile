@@ -48,4 +48,4 @@ all: main stack_gTest
 	./stack_gTest
 
 clean: 
-	rm *.o main stack_gTest
+	rm *.o *.a main stack_gTest
