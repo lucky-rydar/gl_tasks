@@ -1,0 +1,6 @@
+/task1/.vs/
+/task2/.vs/
+/task3/.vs/
+
+*.o
+*.a
