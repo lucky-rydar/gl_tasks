@@ -2,12 +2,15 @@
 
 uint64_t fibonacci_sum(uint64_t n)
 {
-	return fibonacci(0, 1, n);
+	if (n == 0)
+		return 0;
+	else if(n > 0)
+		return fibonacci(0, 1, n);
 }
 
 uint64_t fibonacci(uint64_t pre_last, uint64_t last, uint64_t n)
 {
-	if (n == 0)
+	if (n == 1)
 		return 0;
 	else
 	{
