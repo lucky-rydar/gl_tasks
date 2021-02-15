@@ -33,6 +33,6 @@ int main(int argc, char** argv)
 			cout << "Can't convert to integer" << endl;
 		}
 	}
-	
-	
+
+	return 0;
 }
