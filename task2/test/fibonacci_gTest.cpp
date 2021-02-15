@@ -1,6 +1,11 @@
 #include "fibonacci.h"
 #include "gtest/gtest.h"
 
+TEST()
+{
+
+}
+
 int main(int argc, char** argv)
 {
 	puts("Google tests...");
