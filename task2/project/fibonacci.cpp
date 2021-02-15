@@ -4,7 +4,7 @@ uint64_t fibonacci_sum(uint64_t n)
 {
 	if (n == 0)
 		return 0;
-	else if(n > 0)
+	else
 		return fibonacci(0, 1, n);
 }
 
