@@ -11,19 +11,18 @@ namespace collections
 		// so I just made constructor
 
 		// creating stack with size
-		stack(size_t size) : elems()
+		stack(size_t size) : max_amount(size)
 		{
 			if (size == 0)
 				throw std::logic_error("Size of stack can not be zero");
-			
-			elems.reserve(size);
+
 		}
 
 		// add element on stack
 		void push(T elem) 
 		{
 			if (is_full())
-				throw std::out_of_range("Stack is full");
+				throw std::out_of_range("Stack overflow");
 
 			elems.push_back(elem);
 		}
@@ -49,31 +48,37 @@ namespace collections
 		// max amount of elements
 		size_t size()
 		{
-			return elems.capacity();
+			return max_amount;
 		}
 		
 		//just resize
 		void resize(size_t new_size)
 		{
-			if (new_size < elems.size())
-				elems.resize(new_size);
-			else if (new_size > elems.size())
-				elems.reserve(new_size);
+			if (new_size < max_amount)
+			{
+				max_amount = new_size;
+				this->elems.resize(max_amount);
+			}
+			else if (new_size > max_amount)
+			{
+				max_amount = new_size;
+			}
 		}
 
 	private:
 		//this method tells if stack is full or not
 		bool is_full()
 		{
-			return (elems.size() == elems.capacity());
+			return (elems.size() == max_amount);
 		}
 
 		bool is_empty()
 		{
-			return elems.empty();
+			return (elems.size() == 0);
 		}
 
 		std::vector<T> elems;
+		size_t max_amount;
 	};
 	
 }
