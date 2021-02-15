@@ -26,7 +26,9 @@ int main(int argc, char** argv)
 	{
 		try
 		{
-			cout << fibonacci_sum(stoull(arg)) << endl;
+			if (stoll(arg) < 0)
+				throw std::exception();
+			cout << fibonacci_sum(stoll(arg)) << endl;
 		}
 		catch (std::exception& e)
 		{
