@@ -12,7 +12,7 @@ GTEST_SRCS_ = $(GTEST_DIR)/src/*.cc $(GTEST_DIR)/src/*.h $(GTEST_HEADERS)
 SOURCE_DIR = project
 TEST_DIR = test
 
-CXXFLAGS += -g -std=gnu++11 -Wall -Wextra -pthread
+CXXFLAGS += -g -std=gnu++17 -Wall -Wextra -pthread
 CPPFLAGS += -isystem $(GTEST_DIR)/include
 
 stack.o : $(SOURCE_DIR)/stack.cpp $(SOURCE_DIR)/stack.h
