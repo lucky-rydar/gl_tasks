@@ -22,7 +22,7 @@ int main(int argc, char** argv)
 		fs::path p(input);
 		int counted = 0;
 		thread count_files(count_files_in_dir, p, &counted);
-		thread print_files(print_files_in_dir, p);
+		thread print_files(print_paths_in_dir, p);
 
 		count_files.join();
 		print_files.join();

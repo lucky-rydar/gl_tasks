@@ -4,12 +4,12 @@
 TEST(file, print_files_in_dir1)
 {
 	auto p = fs::current_path();
-	ASSERT_NO_THROW(print_files_in_dir(p));
+	ASSERT_NO_THROW(print_paths_in_dir(p));
 }
 
 TEST(file, print_files_in_dir2)
 {
-	ASSERT_THROW(print_files_in_dir(fs::path("fhdfjkdt6754564")), std::exception);
+	ASSERT_THROW(print_paths_in_dir(fs::path ("fhdfjkdt6754564")), std::exception);
 }
 
 TEST(file, count_files_in_dir1)

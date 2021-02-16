@@ -6,12 +6,12 @@ void count_files_in_dir(fs::path path, int* counted)
 	*counted = std::count_if(fs::directory_iterator(path), fs::directory_iterator{}, (fp)fs::is_regular_file);
 }
 
-void print_files_in_dir(fs::path path)
+void print_paths_in_dir(fs::path path)
 {
 	fs::directory_iterator i(path);
 	for (; i != fs::directory_iterator{}; i++)
 	{
 		if (i->is_regular_file())
-			cout << i->path().filename() << endl;
+			cout << i->path() << endl;
 	}
 }
