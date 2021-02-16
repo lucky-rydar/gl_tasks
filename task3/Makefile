@@ -44,7 +44,7 @@ main.o : $(SOURCE_DIR)/main.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(SOURCE_DIR)/main.cpp
 	
 main : main.o file_counter.o
-	$(CXX) -o main main.o file_counter.o
+	$(CXX) -o main main.o file_counter.o -lpthread
 	
 all : file_counter_gTest main
 	./file_counter_gTest
