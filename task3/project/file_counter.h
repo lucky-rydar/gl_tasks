@@ -3,6 +3,7 @@
 #include <string>
 #include <filesystem>
 #include <algorithm>
+#include <exception>
 
 using namespace std;
 namespace fs = std::filesystem;
