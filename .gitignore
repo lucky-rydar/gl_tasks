@@ -4,3 +4,8 @@
 
 *.o
 *.a
+
+main
+task1/stack_gTest
+task2/fibonacci_gTest
+task3/file_counter_gTest
