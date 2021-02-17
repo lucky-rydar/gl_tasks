@@ -34,6 +34,11 @@ To build any task:
 2. enter repo dir and task you want build ``` cd gl_task/taskn ```
 3. enter ``` make all ``` too build all the project 
 
+### Run
 
+Every task has own main file, you can run it with flags "help" or 
+for the third task "--help" to see some additional info about tasks.
+
+Also in every task there is unit tests, so you can run it too.
 
 
